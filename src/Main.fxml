@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+      prefHeight="170.0" prefWidth="360.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="MainController">
+    <padding>
+        <Insets left="20.0" right="20.0"/>
+    </padding>
+    <Label text="Input time, e.g. 1h30m, and click Shutdown" textAlignment="CENTER" wrapText="true">
+        <VBox.margin>
+            <Insets bottom="10.0" top="10.0"/>
+        </VBox.margin>
+    </Label>
+    <TextField fx:id="timeField" alignment="CENTER" maxWidth="150.0">
+        <opaqueInsets>
+            <Insets/>
+        </opaqueInsets>
+        <VBox.margin>
+            <Insets bottom="10.0"/>
+        </VBox.margin>
+    </TextField>
+    <HBox alignment="CENTER">
+        <VBox.margin>
+            <Insets bottom="10.0"/>
+        </VBox.margin>
+        <Button defaultButton="true" mnemonicParsing="false" onAction="#shutdown"
+                text="Shutdown">
+            <HBox.margin>
+                <Insets right="10.0"/>
+            </HBox.margin>
+        </Button>
+        <Button mnemonicParsing="false" onAction="#cancelShutdown"
+                text="Cancel Shutdown"/>
+    </HBox>
+    <Label fx:id="label" alignment="BOTTOM_CENTER" textAlignment="RIGHT" wrapText="true">
+        <VBox.margin>
+            <Insets/>
+        </VBox.margin>
+    </Label>
+</VBox>
