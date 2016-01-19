@@ -3,6 +3,9 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.paint.Color;
 
+/**
+ * Controller for the interface.
+ */
 public class MainController {
 
     @FXML
@@ -54,7 +57,7 @@ public class MainController {
      * that string follows the specified format and converts any hours and minutes into seconds.
      *
      * @param inputString The time formatted string to parse.
-     * @return The time in minutes, -1 if input is invalid.
+     * @return The time in seconds, -1 if input is empty or invalid.
      */
     private int parseSeconds(String inputString) {
         String timeRegex = "([0-9]+h)?([0-9]+m)?";
